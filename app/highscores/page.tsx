@@ -1,0 +1,2 @@
+import PageShell from "@/components/PageShell";
+export default function Page(){return <PageShell title="Highscores" subtitle="Track Levincia's top adventurers once the game API is connected."><div className="glass overflow-hidden rounded-xl"><div className="grid grid-cols-3 border-b border-white/10 p-4 font-bold"><span>Rank</span><span>Player</span><span>Total XP</span></div>{[1,2,3,4,5].map(i=><div className="grid grid-cols-3 border-b border-white/5 p-4 text-slate-500" key={i}><span>#{i}</span><span>Coming soon</span><span>—</span></div>)}</div></PageShell>}

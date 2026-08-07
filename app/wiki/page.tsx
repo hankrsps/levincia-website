@@ -1,0 +1,2 @@
+import PageShell from "@/components/PageShell";
+export default function Page(){return <PageShell title="Wiki" subtitle="Guides and game knowledge will live here as Levincia grows."><div className="grid gap-5 md:grid-cols-2">{["Getting Started","Bosses","Skills","Items","Commands","Frequently Asked Questions"].map(x=><div className="glass rounded-xl p-6" key={x}><h2 className="text-xl font-bold">{x}</h2><p className="mt-2 text-sm text-slate-400">Content coming soon.</p></div>)}</div></PageShell>}

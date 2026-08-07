@@ -1,0 +1,2 @@
+import PageShell from "@/components/PageShell";
+export default function Page(){return <PageShell title="Vote" subtitle="Voting links and community rewards can be added here when your server listings are ready."><div className="glass rounded-xl p-7"><h2 className="text-2xl font-bold">Support Levincia</h2><p className="mt-3 text-slate-400">No voting sites have been configured yet.</p></div></PageShell>}

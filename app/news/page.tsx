@@ -1,0 +1,2 @@
+import PageShell from "@/components/PageShell"; import { news } from "@/data/site";
+export default function Page(){return <PageShell title="News" subtitle="Development notes, server announcements and community updates."><div className="grid gap-5">{news.map(n=><article key={n.title} className="glass rounded-xl p-7"><div className="text-xs font-bold text-[#4da3ff]">{n.tag} · {n.date}</div><h2 className="mt-3 text-2xl font-bold">{n.title}</h2><p className="mt-3 text-slate-400">{n.body}</p></article>)}</div></PageShell>}

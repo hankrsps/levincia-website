@@ -1,2 +1,0 @@
-import type { ReactNode } from "react";
-export default function PageShell({title,subtitle,children}:{title:string;subtitle:string;children:ReactNode}){return <main className="min-h-screen pt-28"><section className="mx-auto max-w-6xl px-5 py-16"><p className="mb-3 text-xs font-bold tracking-[.3em] text-[#d8aa45]">LEVINCIA</p><h1 className="gold-text text-5xl font-black md:text-6xl">{title}</h1><p className="mt-5 max-w-2xl text-lg text-slate-300">{subtitle}</p><div className="mt-10">{children}</div></section></main>}

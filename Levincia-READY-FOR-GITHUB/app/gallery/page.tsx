@@ -1,2 +1,0 @@
-import PageShell from "@/components/PageShell";
-export default function Page(){return <PageShell title="Gallery" subtitle="A home for Levincia screenshots, boss encounters and community moments."><div className="grid gap-4 md:grid-cols-3">{[1,2,3,4,5,6].map(i=><div key={i} className="glass flex aspect-video items-center justify-center rounded-xl text-slate-600">Screenshot {i}</div>)}</div></PageShell>}

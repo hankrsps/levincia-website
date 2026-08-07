@@ -1,2 +1,0 @@
-import PageShell from "@/components/PageShell";
-export default function Page(){return <PageShell title="Store" subtitle="A future home for optional server support and cosmetic offerings."><div className="glass rounded-xl p-7"><h2 className="text-2xl font-bold">Store coming later</h2><p className="mt-3 text-slate-400">This page is intentionally a placeholder until your server economy and store policies are finalized.</p></div></PageShell>}

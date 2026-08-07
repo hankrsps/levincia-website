@@ -1,0 +1,2 @@
+import { site } from "@/data/site";
+export default function Footer(){return <footer className="site-footer"><div className="footer-inner"><div><div className="footer-logo">LEVINCIA</div><p>Forge Your Legacy.</p></div><div className="footer-links"><a href="/download/">Download</a><a href="/news/">News</a><a href="/wiki/">Wiki</a><a href={site.discord}>Discord</a><a href="/staff/">Staff</a><a href="/contact/">Contact</a></div></div><div className="footer-bottom">© 2026 Levincia. Community game project. Not affiliated with Jagex Ltd.</div></footer>}

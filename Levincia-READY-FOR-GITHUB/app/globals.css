@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; background:#070b12; color:#eef3f8; font-family: Georgia, 'Times New Roman', serif; }
+a { color: inherit; text-decoration:none; }
+.hero-bg {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(77,163,255,.18), transparent 34%),
+    radial-gradient(circle at 50% 55%, rgba(216,170,69,.10), transparent 28%),
+    linear-gradient(180deg, rgba(6,10,18,.35), #070b12 84%),
+    url('/levincia-website/images/levincia-logo.png') center 12%/min(900px,82vw) auto no-repeat;
+}
+@media (max-width: 700px){ .hero-bg{ background-size: 115vw auto; } }
+.glass { background: linear-gradient(180deg, rgba(18,29,47,.88), rgba(8,14,24,.88)); border:1px solid rgba(216,170,69,.22); backdrop-filter: blur(12px); }
+.gold-text { background:linear-gradient(180deg,#fff0b5,#d6a13f 55%,#8a5a10); -webkit-background-clip:text; background-clip:text; color:transparent; }

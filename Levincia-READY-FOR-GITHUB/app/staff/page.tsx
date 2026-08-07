@@ -1,0 +1,2 @@
+import PageShell from "@/components/PageShell";
+export default function Page(){return <PageShell title="Staff" subtitle="Meet the team building and supporting Levincia."><div className="grid gap-5 md:grid-cols-3">{["Owner","Developer","Moderator"].map(r=><div className="glass rounded-xl p-7 text-center" key={r}><div className="mx-auto mb-4 h-20 w-20 rounded-full border border-[#d8aa4555] bg-white/5"/><h2 className="text-xl font-bold">{r}</h2><p className="mt-2 text-sm text-slate-500">Team member coming soon.</p></div>)}</div></PageShell>}

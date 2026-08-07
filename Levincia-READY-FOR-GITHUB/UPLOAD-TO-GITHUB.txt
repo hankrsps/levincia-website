@@ -1,0 +1,49 @@
+LEVINCIA — READY FOR GITHUB PAGES
+=================================
+
+Domain:
+https://levincia-ps.com
+
+Repository:
+https://github.com/hankrsps/levincia-website
+
+UPLOAD STEPS
+------------
+1. Extract this ZIP.
+2. Open your GitHub repository.
+3. Upload EVERYTHING inside this folder to the repository root.
+   Do not upload this ZIP itself.
+4. Make sure these are visible in the repo:
+   .github/workflows/deploy-pages.yml
+   app/
+   components/
+   public/
+   package.json
+   next.config.ts
+
+5. Go to:
+   Settings -> Pages
+
+6. Set:
+   Source: GitHub Actions
+   Custom domain: levincia-ps.com
+
+7. Go to:
+   Actions -> Deploy Levincia to GitHub Pages
+
+8. Click:
+   Run workflow
+
+9. Choose the branch that contains these files (main or source).
+
+10. Wait for:
+    build  ✓
+    deploy ✓
+
+IMPORTANT
+---------
+public/CNAME is already configured with:
+levincia-ps.com
+
+The Next.js project is configured for static export and the workflow
+uploads the generated ./out directory to GitHub Pages.

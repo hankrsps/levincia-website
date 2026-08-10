@@ -32,109 +32,251 @@
 @media(max-width:650px){.home-hero{min-height:800px}.feature-art{height:210px}.fantasy-break{min-height:330px}.fantasy-break-copy{padding:56px 18px}.community-cta-art{background-position:42% center}}
 
 /* ===== Full-site Levincia fantasy theme ===== */
-.fantasy-page{
-  --page-art:url('/images/hero-levincia.jpg');
-  position:relative;
-  background:#05080d;
-}
-.fantasy-page-hero{
-  position:relative;
-  min-height:430px;
-  display:flex;
-  align-items:flex-end;
-  padding:112px 0 72px;
-  isolation:isolate;
-  background:#07101a;
-}
-.page-hero-art{
-  position:absolute;
-  inset:0;
-  z-index:-3;
-  background-image:var(--page-art);
-  background-size:cover;
-  background-position:center 42%;
-  filter:saturate(.88) contrast(1.05) brightness(.7);
-  transform:scale(1.015);
-}
-.page-hero-shade{
-  position:absolute;
-  inset:0;
-  z-index:-2;
-  background:
-    linear-gradient(90deg,rgba(3,6,10,.94) 0%,rgba(3,6,10,.58) 48%,rgba(3,6,10,.82) 100%),
-    linear-gradient(180deg,rgba(5,9,15,.15) 0%,rgba(5,9,15,.18) 45%,#05080d 100%);
-}
-.fantasy-page-hero:after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  height:1px;
-  background:linear-gradient(90deg,transparent,rgba(221,179,79,.55),transparent);
-}
-.page-hero-copy{z-index:1;padding-bottom:4px}
-.page-hero-copy .eyebrow{color:#f0c761;text-shadow:0 2px 18px rgba(0,0,0,.7)}
-.page-hero-copy h1{
-  max-width:900px;
-  margin:8px 0 12px;
-  font-size:clamp(3.4rem,7.5vw,6.5rem);
-  line-height:.96;
-  text-shadow:0 8px 35px rgba(0,0,0,.65);
-}
-.page-hero-copy .page-subtitle{
-  max-width:760px;
-  color:#d2dae4;
-  font-size:1.08rem;
-  text-shadow:0 3px 14px rgba(0,0,0,.75);
-}
-.page-fantasy-body{
-  position:relative;
-  overflow:hidden;
-  min-height:520px;
-  background:
-    radial-gradient(circle at 15% 8%,rgba(58,122,196,.13),transparent 27%),
-    radial-gradient(circle at 88% 35%,rgba(190,137,40,.08),transparent 23%),
-    linear-gradient(180deg,#05080d 0%,#08101a 42%,#05080d 100%);
-}
-.page-fantasy-watermark{
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  opacity:.055;
-  background-image:var(--page-art);
-  background-size:cover;
-  background-position:center;
-  filter:grayscale(.35) saturate(.55);
-  mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 72%,transparent 100%);
-}
-.fantasy-page .page-content{position:relative;z-index:1;padding-top:68px;padding-bottom:105px}
-.fantasy-page .content-card{
-  border-color:rgba(221,179,79,.24);
-  background:
-    linear-gradient(180deg,rgba(16,29,45,.91),rgba(6,12,20,.95));
-  box-shadow:0 22px 60px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.025);
-  backdrop-filter:blur(10px);
-  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
-}
-.fantasy-page .content-card:hover{
-  transform:translateY(-3px);
-  border-color:rgba(235,190,88,.42);
-  box-shadow:0 28px 70px rgba(0,0,0,.42),0 0 34px rgba(221,179,79,.045);
-}
-.fantasy-page .content-card h2{color:#f2f5f8}
-.fantasy-page .content-card p{color:#a7b2c0}
-.fantasy-page .content-card img{
-  border:1px solid rgba(221,179,79,.2);
-  box-shadow:0 18px 42px rgba(0,0,0,.3);
-}
-.fantasy-page .btn-gold{box-shadow:0 0 36px rgba(222,170,55,.16),0 12px 28px rgba(0,0,0,.26)}
-.fantasy-page .page-glow{background:#d09b37;opacity:.09;right:5%;top:-300px}
 
-@media(max-width:650px){
-  .fantasy-page-hero{min-height:360px;padding:100px 0 52px}
-  .page-hero-art{background-position:center}
-  .page-hero-copy h1{font-size:clamp(3rem,15vw,4.7rem)}
-  .page-hero-copy .page-subtitle{font-size:.98rem;line-height:1.7}
-  .fantasy-page .page-content{padding-top:46px;padding-bottom:76px}
+.fantasy-page {
+  --page-art: url('/images/hero-levincia.jpg');
+  position: relative;
+  background: #05080d;
+}
+
+/* Smaller hero so images aren't stretched/blurry */
+.fantasy-page-hero {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  padding: 100px 0 50px;
+  isolation: isolate;
+  background: #07101a;
+}
+
+/* Page background image */
+.page-hero-art {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+
+  background-image: var(--page-art);
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  filter:
+    saturate(.95)
+    contrast(1.04)
+    brightness(.72);
+}
+
+/* Dark overlay so text stays readable */
+.page-hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 6, 10, .94) 0%,
+      rgba(3, 6, 10, .48) 48%,
+      rgba(3, 6, 10, .82) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 9, 15, .10) 0%,
+      rgba(5, 9, 15, .15) 50%,
+      #05080d 100%
+    );
+}
+
+/* Gold line underneath banner */
+.fantasy-page-hero:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(221, 179, 79, .55),
+      transparent
+    );
+}
+
+/* Hero text */
+.page-hero-copy {
+  z-index: 1;
+  padding-bottom: 4px;
+}
+
+.page-hero-copy .eyebrow {
+  color: #f0c761;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .7);
+}
+
+.page-hero-copy h1 {
+  max-width: 900px;
+  margin: 8px 0 12px;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: .96;
+  text-shadow: 0 8px 35px rgba(0, 0, 0, .65);
+}
+
+.page-hero-copy .page-subtitle {
+  max-width: 760px;
+  color: #d2dae4;
+  font-size: 1.08rem;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, .75);
+}
+
+/* Content area underneath banner */
+.page-fantasy-body {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+
+  background:
+    radial-gradient(
+      circle at 15% 8%,
+      rgba(58, 122, 196, .13),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 88% 35%,
+      rgba(190, 137, 40, .08),
+      transparent 23%
+    ),
+    linear-gradient(
+      180deg,
+      #05080d 0%,
+      #08101a 42%,
+      #05080d 100%
+    );
+}
+
+/* Very faint artwork behind page content */
+.page-fantasy-watermark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .04;
+
+  background-image: var(--page-art);
+  background-size: cover;
+  background-position: center;
+
+  filter:
+    grayscale(.35)
+    saturate(.55);
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 18%,
+      #000 72%,
+      transparent 100%
+    );
+}
+
+/* Main page content */
+.fantasy-page .page-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 68px;
+  padding-bottom: 105px;
+}
+
+/* Content cards */
+.fantasy-page .content-card {
+  border-color: rgba(221, 179, 79, .24);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16, 29, 45, .91),
+      rgba(6, 12, 20, .95)
+    );
+
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, .34),
+    inset 0 1px rgba(255, 255, 255, .025);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform .22s ease,
+    border-color .22s ease,
+    box-shadow .22s ease;
+}
+
+.fantasy-page .content-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(235, 190, 88, .42);
+
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, .42),
+    0 0 34px rgba(221, 179, 79, .045);
+}
+
+.fantasy-page .content-card h2 {
+  color: #f2f5f8;
+}
+
+.fantasy-page .content-card p {
+  color: #a7b2c0;
+}
+
+.fantasy-page .content-card img {
+  max-width: 100%;
+  height: auto;
+
+  border: 1px solid rgba(221, 179, 79, .2);
+
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, .3);
+}
+
+.fantasy-page .btn-gold {
+  box-shadow:
+    0 0 36px rgba(222, 170, 55, .16),
+    0 12px 28px rgba(0, 0, 0, .26);
+}
+
+.fantasy-page .page-glow {
+  background: #d09b37;
+  opacity: .09;
+  right: 5%;
+  top: -300px;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+
+  .fantasy-page-hero {
+    min-height: 280px;
+    padding: 90px 0 42px;
+  }
+
+  .page-hero-art {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .page-hero-copy h1 {
+    font-size: clamp(2.8rem, 15vw, 4.5rem);
+  }
+
+  .page-hero-copy .page-subtitle {
+    font-size: .98rem;
+    line-height: 1.7;
+  }
+
+  .fantasy-page .page-content {
+    padding-top: 46px;
+    padding-bottom: 76px;
+  }
 }

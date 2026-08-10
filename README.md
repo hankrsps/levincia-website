@@ -12,3 +12,6 @@ Static Next.js site configured for GitHub Pages at **https://levincia-ps.com**.
 6. Enable **Enforce HTTPS** once GitHub makes the option available.
 
 The workflow verifies that both `out/index.html` and `out/CNAME` exist before deployment.
+
+## Full fantasy theme update
+All secondary pages now use the shared `PageShell` fantasy treatment. Each section gets a page-specific hero image from `public/images`, dark readable overlays, subtle background artwork, and matching fantasy cards. Edit `components/PageShell.tsx` to change which image appears on each page.

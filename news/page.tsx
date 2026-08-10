@@ -1,0 +1,2 @@
+import PageShell from "@/components/PageShell"; import { news } from "@/data/site";
+export default function Page(){return <PageShell title="News" subtitle="Levincia announcements, development notes and community updates."><div style={{display:"grid",gap:16}}>{news.map(n=><article className="content-card" key={n.title}><p className="eyebrow">{n.tag} · {n.date}</p><h2 style={{fontSize:"1.7rem",marginTop:12}}>{n.title}</h2><p>{n.body}</p></article>)}</div></PageShell>}

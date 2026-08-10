@@ -36,9 +36,7 @@ export default function PageShell({
       <section className="fantasy-page-hero">
 
         <div className="page-hero-art" />
-
         <div className="page-hero-shade" />
-
         <div className="page-glow" />
 
         <div className="page-container page-hero-copy">

@@ -1,0 +1,2 @@
+import type { ReactNode } from "react";
+export default function PageShell({title,subtitle,eyebrow="LEVINCIA",children}:{title:string;subtitle:string;eyebrow?:string;children:ReactNode}){return <main className="page-wrap"><section className="page-hero"><div className="page-glow"/><div className="page-container"><p className="eyebrow">{eyebrow}</p><h1>{title}</h1><p className="page-subtitle">{subtitle}</p></div></section><section className="page-container page-content">{children}</section></main>}
